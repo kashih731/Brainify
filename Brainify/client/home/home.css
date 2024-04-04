@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Kode Mono;
+}
+body{
+    background-color: black;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12vh;
+    min-height: 100vh;
+    background-image: url(/Brainify/client/image/black.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+}
+.main.active{
+    transform: scale(1);
+    filter: blur(10px);
+    pointer-events: none;
+}
+#navbar{
+    color: #EDEDED;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: row;
+    height: 8em;
+    gap: 2em;
+}
+#name{
+    align-self: center;
+    font-weight: 900;
+    font-size: 5em;
+    transition: ease .6s;
+}
+#name:hover{
+    cursor: default;
+    filter: drop-shadow( 0 0 10px #EDEDED);
+    transition: ease .6s;
+}
+ul{
+    position: absolute;
+    right: 2em;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    list-style: none;
+}
+.links{
+    padding: .5em;
+    font-weight: 900;
+    font-size: 2.1em;
+    transition: ease;
+}
+.links a{
+    text-decoration: none;
+    color: #EDEDED;
+}
+.links:hover, .links.active{
+    border-bottom: 4px solid #EDEDED;
+    border-radius: 7px;
+    filter: drop-shadow( 0 0 3px #EDEDED);
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: ease;
+}
+#subTitle{
+    width: 70%;
+    color: #EDEDED;
+    font-weight: 900;
+    font-size: 6em;
+    transition: ease .5s;
+}
+#subTitle:hover{
+    cursor: default;
+    filter: drop-shadow( 0 0 10px #EDEDED);
+    transform: scale(1.1);
+    transition: ease .5s;
+}
+#subs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10em;
+}
+.sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2em 2em;
+    width: 15em;
+    height: 15em;
+    color: #EDEDED;
+    backdrop-filter: blur(3px);
+    border: solid #EDEDED;
+    border-radius: 2em;
+    transition: ease .5s;
+}
+.sub:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px #EDEDED,
+    0 0 25px #EDEDED,
+    0 0 50px #EDEDED,
+    0 0 100px #EDEDED;
+    transform: scale(1.1);
+    transition: ease .5s;
+}
+.sub h1{
+    font-size: 50px;
+}
+.popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #212529;
+    color: #EDEDED;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(.9);
+    width: 65em;
+    height: 40em;
+    padding: 2em;
+    border: solid #EDEDED;
+    border-radius: 2em;
+    opacity: 0;
+    pointer-events: none;
+    transition: ease .5s;
+}
+.popup.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+    transition: ease .5s;
+}
+.popup h2{
+    font-weight: 1000;
+    font-size: 5em;
+}
+.popup p {
+    font-size: 2.2em;
+    font-weight: 550;
+}
+.popup-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.popup-btn{
+    color: #EDEDED;
+    background-color: #495057;
+    height: 6em;
+    width: 15em;
+    border-radius: 1em;
+    font-weight: 700;
+    border: solid #EDEDED;
+    transition: ease .4s;
+}
+.popup-btn a {
+    text-decoration: none;
+    color: #EDEDED;
+    font-size: 2em;
+}
+.popup-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #EDEDED,
+    0 0 25px #EDEDED;
+    transition: ease .4s;
+}
+.ext-btn{
+    background-color: transparent;
+}
+.ext-btn:hover{
+    background-color: #495057;
+    color: #EDEDED;
+    transition: ease .4s;
+}
